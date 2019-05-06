@@ -81,11 +81,12 @@ public class AddItem extends AppCompatActivity
         else
         {
 
-            ClaseItem AgregarObjeto = new ClaseItem(namestr, categoria, unidadp, unidads, Integer.parseInt(unidad));
             ObjectsDBHelper DBH = new ObjectsDBHelper(this);//Creamos el objeto
             SQLiteDatabase db = DBH.getWritableDatabase(); // Obtenemos la id de la database
 
-            AgregarObjeto.InsertarDatos(this, db);
+            ClaseItem AgregarObjeto = new ClaseItem(namestr, categoria, unidadp, unidads, Integer.parseInt(unidad));
+
+            AgregarObjeto.InsertarDatos(db);
             AgregarObjeto.ConsultarObjetos(this, db);
 
             db.close();

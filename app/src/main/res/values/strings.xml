@@ -7,4 +7,13 @@
     <string name="inventariar">Inventariar</string>
     <string name="ver_informes">Ver Informes</string>
     <string name="selecciona_una_opci_n">Selecciona una opción:</string>
+    <string name="unidad_principal">Unidad Principal:</string>
+    <string name="agregar_un_nuevo_objeto">Agregar un nuevo objeto:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="nombre_del_objeto">Nombre del objeto</string>
+    <string name="categoria">Categoria:</string>
+    <string name="unidad_secundaria">Unidad Secundaria:</string>
+    <string name="cada">Cada </string>
+    <string name="contiene"> contiene </string>
+    <string name="AyudaHint">La unidad principal contiene una cantidad fija de objetos relacionado a la unidad secundaria. Por ejemplo: Cada [Paquete] contiene 0,5 [Kilogramos]</string>
 </resources>

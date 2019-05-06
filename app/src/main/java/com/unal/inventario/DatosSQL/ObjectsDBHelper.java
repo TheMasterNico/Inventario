@@ -4,17 +4,14 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 public class ObjectsDBHelper extends SQLiteOpenHelper {
 
     /*private static final int    DATABASE_VERSION    = 1;
     private static final String DATABASE_NAME       = "Inventario.db";*/
 
-    public ObjectsDBHelper(Context context) {
-        super(context, UsuariosDBHelper.DATABASE_NAME, null, UsuariosDBHelper.DATABASE_VERSION);
-    }
-
-    public static class Objeto implements BaseColumns
+    public static abstract class Objeto implements BaseColumns
     {
         public static String TABLE_NAME = "Objetos";
         public static String OBJ_ID     = "ID";
@@ -24,6 +21,10 @@ public class ObjectsDBHelper extends SQLiteOpenHelper {
         public static String OBJ_UNDS   = "UnidadS";
         public static String OBJ_UND    = "Unidad";
 
+    }
+
+    public ObjectsDBHelper(Context context) {
+        super(context, UsuariosDBHelper.DATABASE_NAME, null, UsuariosDBHelper.DATABASE_VERSION);
     }
 
 
@@ -39,6 +40,7 @@ public class ObjectsDBHelper extends SQLiteOpenHelper {
                 + Objeto.OBJ_UNDS       + " INTEGER NOT NULL,"
                 + Objeto.OBJ_UND        + " INTEGER NOT NULL"
                 + ")");
+        Log.e("Creando tabla", "Se creo la tabla");
     }
 
     @Override
