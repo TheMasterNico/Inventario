@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Inventario</string>
+    <string name="login">Ingresar</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="identificaci_n">Identificación</string>
+    <string name="agregar_objeto">Agregar Objeto</string>
+    <string name="inventariar">Inventariar</string>
+    <string name="ver_informes">Ver Informes</string>
+    <string name="selecciona_una_opci_n">Selecciona una opción:</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_categoria">
+        <item>Refrigerado</item>
+        <item>Congelado</item>
+        <item>Seco</item>
+    </string-array>
+    <string-array name="array_undp">
+        <item>Bandeja</item>
+        <item>Paquete</item>
+        <item>Bolsa</item>
+        <item>Caja</item>
+        <item>Tarro</item>
+    </string-array>
+    <string-array name="array_unds">
+        <item>Unidades</item>
+        <item>Litros</item>
+        <item>Kilogramos</item>
+        <item>Gramos</item>
+    </string-array>
+</resources>
