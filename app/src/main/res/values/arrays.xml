@@ -19,4 +19,5 @@
         <item>Kilogramos</item>
         <item>Gramos</item>
     </string-array>
+    <string name="lista_vacia">Sin Datos</string>
 </resources>

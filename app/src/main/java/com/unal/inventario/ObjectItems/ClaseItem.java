@@ -3,6 +3,7 @@ package com.unal.inventario.ObjectItems;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -33,8 +34,6 @@ public class ClaseItem
 
     public void InsertarDatos(SQLiteDatabase db)
     {
-
-
         ContentValues Valores = new ContentValues();
         Valores.put(ObjectsDBHelper.Objeto.OBJ_NAME,    Nombre);
         Valores.put(ObjectsDBHelper.Objeto.OBJ_CAT,     Categoria);
@@ -42,7 +41,7 @@ public class ClaseItem
         Valores.put(ObjectsDBHelper.Objeto.OBJ_UNDS,    UnidadSecundaria);
         Valores.put(ObjectsDBHelper.Objeto.OBJ_UND,     Unidad);
 
-        db.insert(ObjectsDBHelper.Objeto.TABLE_NAME, null, Valores);
+        db.insertOrThrow(ObjectsDBHelper.Objeto.TABLE_NAME, null, Valores);
     }
 
     public void ConsultarObjetos(Context context, SQLiteDatabase db)

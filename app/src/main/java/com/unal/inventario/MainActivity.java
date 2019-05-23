@@ -6,11 +6,19 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 //import android.util.Log;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.unal.inventario.DatosSQL.SQL;
 import com.unal.inventario.DatosSQL.UsuariosDBHelper;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,14 +27,47 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*Connection conexionMySQL = null;
-        Class.forName("com.mysql.jdbc.Driver").newInstance ();
-        conexionMySQL = DriverManager.getConnection("jdbc:mysql://localhost:3360/inventario", "root", "6582039");
-        Log.i("TAGGER", "Mensaje");*/
+
     }
 
     public void LoginUser(View view)
     {
+        /*try
+        {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException ex) {
+                System.out.println("Error al registrar el driver de MySQL: " + ex);
+            }
+
+            Log.e("Con: ", "aengfp");
+
+            try {
+                Connection conexionMySQL = null;
+                conexionMySQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventario", "root", "6582039");
+                if (conexionMySQL == null) {
+                    Log.e("Con: ", "Nope");
+                } else {
+                    Log.e("Con: ", "Sipi");
+                }
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+
+            //boolean valid = conexionMySQL.isValid(50000);
+            //Log.e("Valid", valid ? "TEST OK" : "TEST FAIL");
+
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        Log.e("TAGGER", "Conectado");*/
+
+
     // Obtenemos el CC y la pass
         EditText IDCC = findViewById(R.id.LaCC);
         String CC = IDCC.getText().toString();
@@ -37,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         //UsuariosDBHelper.SelectUser(getApplicationContext(), CC, Contra).show();
         //Cursor cursor = UsuariosDBHelper.SelectUser(new String[]{CC, Contra});
 
-        UsuariosDBHelper DBH = new UsuariosDBHelper(this);
+        SQL DBH = new SQL(this);
         SQLiteDatabase db = DBH.getWritableDatabase();
 
 

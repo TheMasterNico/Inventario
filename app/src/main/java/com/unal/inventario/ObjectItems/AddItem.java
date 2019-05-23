@@ -1,5 +1,6 @@
 package com.unal.inventario.ObjectItems;
 
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.unal.inventario.DatosSQL.ObjectsDBHelper;
+import com.unal.inventario.DatosSQL.SQL;
 import com.unal.inventario.R;
 
 
@@ -81,16 +83,21 @@ public class AddItem extends AppCompatActivity
         else
         {
 
-            ObjectsDBHelper DBH = new ObjectsDBHelper(this);//Creamos el objeto
-            SQLiteDatabase db = DBH.getWritableDatabase(); // Obtenemos la id de la database
+            try {
+                SQL DBH = new SQL(this);//Creamos el objeto
+                SQLiteDatabase db = DBH.getWritableDatabase(); // Obtenemos la id de la database
 
-            ClaseItem AgregarObjeto = new ClaseItem(namestr, categoria, unidadp, unidads, Integer.parseInt(unidad));
+                ClaseItem AgregarObjeto = new ClaseItem(namestr, categoria, unidadp, unidads, Integer.parseInt(unidad));
 
-            AgregarObjeto.InsertarDatos(db);
-            AgregarObjeto.ConsultarObjetos(this, db);
+                AgregarObjeto.InsertarDatos(db);
+                AgregarObjeto.ConsultarObjetos(this, db);
 
-            db.close();
-            DBH.close();
+                db.close();
+                DBH.close();
+                onBackPressed();
+            } catch (SQLiteConstraintException e) {
+                Toast.makeText(this, "Ya existe un objeto con ese nombre!", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }

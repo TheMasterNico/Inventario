@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,5 +35,13 @@ public class SelectOptionActivity extends AppCompatActivity {
         Intent CambioAddItem = new Intent(this, AddItem.class);
         CambioAddItem.putExtra("userName", Nombre);
         startActivityForResult(CambioAddItem, 0);
+    }
+
+    public void ShowListObject(View view) {
+        Intent CambioListObject = new Intent(this, ListObject.class);
+        CambioListObject.putExtra("userName", Nombre);
+        startActivityForResult(CambioListObject, 0);
+
+
     }
 }

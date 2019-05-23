@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ObjectItems.AddItem"></activity>
+        <activity android:name=".ListObject"></activity>
+        <activity android:name=".ObjectItems.AddItem" />
         <activity android:name=".SelectOptionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
