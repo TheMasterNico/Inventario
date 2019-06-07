@@ -16,4 +16,6 @@
     <string name="cada">Cada </string>
     <string name="contiene"> contiene </string>
     <string name="AyudaHint">La unidad principal contiene una cantidad fija de objetos relacionado a la unidad secundaria. Por ejemplo: Cada [Paquete] contiene 0,5 [Kilogramos]</string>
+    <string name="baja"><![CDATA[<]]></string>
+    <string name="subir"><![CDATA[>]]></string>
 </resources>

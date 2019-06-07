@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/invName"
+        app:layout_constraintTop_toBottomOf="@+id/invundp" />
+
+    <TextView
+        android:id="@+id/invundp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Paquetes"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/invName"
+        app:layout_constraintTop_toTopOf="@+id/invundp" />
+
+    <Button
+        android:id="@+id/invUP2"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=">"
+        app:layout_constraintStart_toEndOf="@+id/invDown"
+        app:layout_constraintTop_toBottomOf="@+id/invundp" />
+
+    <TextView
+        android:id="@+id/invName"
+        android:layout_width="77dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Chorizo"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invundp" />
+
+    <EditText
+        android:id="@+id/cantP"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/invName"
+        app:layout_constraintTop_toBottomOf="@+id/invundp" />
+
+    <Button
+        android:id="@+id/invDown"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/baja"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/cantP"
+        app:layout_constraintTop_toBottomOf="@+id/invundp" />
+
+    <Button
+        android:id="@+id/invUP"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/subir"
+        app:layout_constraintStart_toEndOf="@+id/invDown"
+        app:layout_constraintTop_toBottomOf="@+id/invundp" />
+
+    <TextView
+        android:id="@+id/invundp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="Paquetes"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/invName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/invunds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="Kilogramos"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/invUP"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/canP"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toEndOf="@+id/invUP"
+        app:layout_constraintTop_toBottomOf="@+id/invunds" />
+
+    <Button
+        android:id="@+id/invDNSec"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/baja"
+        app:layout_constraintStart_toEndOf="@+id/canP"
+        app:layout_constraintTop_toBottomOf="@+id/invunds" />
+
+    <Button
+        android:id="@+id/invUPSec"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/subir"
+        app:layout_constraintStart_toEndOf="@+id/invDNSec"
+        app:layout_constraintTop_toBottomOf="@+id/invunds" />
+
+</android.support.constraint.ConstraintLayout>
