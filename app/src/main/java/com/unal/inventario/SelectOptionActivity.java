@@ -44,4 +44,10 @@ public class SelectOptionActivity extends AppCompatActivity {
 
 
     }
+
+    public void StartInventario(View view) {
+        Intent CambioInventario = new Intent(this, Inventariando.class);
+        CambioInventario.putExtra("userName", Nombre);
+        startActivityForResult(CambioInventario, 0);
+    }
 }

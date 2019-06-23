@@ -42,13 +42,11 @@ public class ListObject extends AppCompatActivity {
                 c,
                 new String[] {
                         ObjectsDBHelper.Objeto.OBJ_NAME,
-                        ObjectsDBHelper.Objeto.OBJ_CAT,
-                        ObjectsDBHelper.Objeto.OBJ_UND
+                        ObjectsDBHelper.Objeto.OBJ_CAT
                 },
                 new int[] {
                         R.id.LVNombre,
-                        R.id.LVCategoria,
-                        R.id.LVCaducidad
+                        R.id.LVCategoria
                 },
                 0);
         lista.setAdapter(a);

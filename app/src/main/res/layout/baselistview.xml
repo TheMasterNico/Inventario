@@ -24,12 +24,4 @@
         app:layout_constraintTop_toBottomOf="@+id/LVNombre"
         tools:layout_editor_absoluteX="16dp" />
 
-    <TextView
-        android:id="@+id/LVCaducidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/LVCategoria"
-        tools:layout_editor_absoluteX="16dp" />
 </android.support.constraint.ConstraintLayout>

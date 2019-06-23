@@ -32,40 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void LoginUser(View view)
     {
-        /*try
-        {
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-            } catch (ClassNotFoundException ex) {
-                System.out.println("Error al registrar el driver de MySQL: " + ex);
-            }
 
-            Log.e("Con: ", "aengfp");
-
-            try {
-                Connection conexionMySQL = null;
-                conexionMySQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventario", "root", "6582039");
-                if (conexionMySQL == null) {
-                    Log.e("Con: ", "Nope");
-                } else {
-                    Log.e("Con: ", "Sipi");
-                }
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-
-            //boolean valid = conexionMySQL.isValid(50000);
-            //Log.e("Valid", valid ? "TEST OK" : "TEST FAIL");
-
-
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-        Log.e("TAGGER", "Conectado");*/
 
 
     // Obtenemos el CC y la pass

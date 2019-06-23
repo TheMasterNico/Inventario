@@ -45,15 +45,15 @@ public class SQL extends SQLiteOpenHelper {
                 + ObjectsDBHelper.Objeto.TABLE_NAME     + " ("
                 + ObjectsDBHelper.Objeto.OBJ_ID         + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + ObjectsDBHelper.Objeto.OBJ_NAME       + " VARCHAR(24) NOT NULL,"
-                + ObjectsDBHelper.Objeto.OBJ_CAT        + " INTEGER NOT NULL,"
-                + ObjectsDBHelper.Objeto.OBJ_UNDP       + " INTEGER NOT NULL,"
-                + ObjectsDBHelper.Objeto.OBJ_UNDS       + " INTEGER NOT NULL,"
+                + ObjectsDBHelper.Objeto.OBJ_CAT        + " VARCHAR(24) NOT NULL,"
+                + ObjectsDBHelper.Objeto.OBJ_UNDP       + " VARCHAR(24) NOT NULL,"
+                + ObjectsDBHelper.Objeto.OBJ_UNDS       + " VARCHAR(24) NOT NULL,"
                 + ObjectsDBHelper.Objeto.OBJ_UND        + " INTEGER NOT NULL,"
                 + "UNIQUE ("
                 + ObjectsDBHelper.Objeto.OBJ_NAME
                 + "))"
         );
-        db.close();
+        //db.close(); // Esto da error attempt to re-open an already-closed object: SQLiteDatabase
 
     }
 

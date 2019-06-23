@@ -15,15 +15,15 @@ public class ClaseItem
     private String  Nombre;             // Nombre del objeto
     private String  Lote;               // Lote de fabricacion
     private int     Vencimiento;        // Fecha de vencimiento epoch
-    private int     Categoria;          // 0: Refrigerado. 1: Secos 2: Congelados
-    private int     UnidadPrincipal;    // Paquetes, bolsas, cajas, etc...
-    private int     UnidadSecundaria;   // Unidad, KG, Gramos, litros, etc...
+    private String     Categoria;          // 0: Refrigerado. 1: Secos 2: Congelados
+    private String     UnidadPrincipal;    // Paquetes, bolsas, cajas, etc...
+    private String     UnidadSecundaria;   // Unidad, KG, Gramos, litros, etc...
     private int     Unidad;             // Cada UnidadPrincipal contiene X UnidadSecundaria
 
 
 
 
-    public ClaseItem(String nombre, int categoria, int unidadPrincipal, int unidadSecundaria, int unidad) {
+    public ClaseItem(String nombre, String categoria, String unidadPrincipal, String unidadSecundaria, int unidad) {
         Nombre = nombre;
         Categoria = categoria;
         UnidadPrincipal = unidadPrincipal;

@@ -49,7 +49,7 @@ public class AddItem extends AppCompatActivity
 
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
-                // TODO Auto-generated method stub
+                
                 Log.e("Selecciona", "Nada");
             }
         };
@@ -69,9 +69,9 @@ public class AddItem extends AppCompatActivity
     public void oncAddItem(View view) {
 
         EditText    name    = findViewById(R.id.editName    ); String namestr   = name.getText().toString();
-        Spinner     cat     = findViewById(R.id.spinnerCat  ); int categoria    = (int)cat.getSelectedItemId(); //String catstr    = cat.getSelectedItem().toString();
-        Spinner     undp    = findViewById(R.id.spinnerUNDP ); int unidadp      = (int)undp.getSelectedItemId(); //String undpstr   = undp.getSelectedItem().toString();
-        Spinner     unds    = findViewById(R.id.spinnerUNDS ); int unidads      = (int)unds.getSelectedItemId(); //String undsstr   = unds.getSelectedItem().toString();
+        Spinner     cat     = findViewById(R.id.spinnerCat  ); String categoria    = cat.getSelectedItem().toString(); // int categoria    = (int)cat.getSelectedItemId();
+        Spinner     undp    = findViewById(R.id.spinnerUNDP ); String unidadp   = undp.getSelectedItem().toString(); //int unidadp      = (int)undp.getSelectedItemId();
+        Spinner     unds    = findViewById(R.id.spinnerUNDS ); String unidads   = unds.getSelectedItem().toString();//int unidads      = (int)unds.getSelectedItemId();
         EditText    und     = findViewById(R.id.editUnidad  ); String unidad    = und.getText().toString();
 
 
