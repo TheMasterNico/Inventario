@@ -5,21 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="50dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="0"
-        android:inputType="numberSigned"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/invName"
-        app:layout_constraintTop_toBottomOf="@+id/invundp" />
-
+    <!-- index 0 -->
     <Button
         android:id="@+id/invUP2"
         android:layout_width="45dp"
@@ -29,7 +15,7 @@
         android:text=">"
         app:layout_constraintStart_toEndOf="@+id/invDown"
         app:layout_constraintTop_toBottomOf="@+id/invundp" />
-
+    <!-- index 1 -->
     <TextView
         android:id="@+id/invName"
         android:layout_width="wrap_content"
@@ -42,7 +28,7 @@
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/invundp" />
-
+    <!-- index 2 -->
     <EditText
         android:id="@+id/cantP"
         android:layout_width="50dp"
@@ -56,29 +42,31 @@
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/invName"
         app:layout_constraintTop_toBottomOf="@+id/invundp" />
-
+    <!-- index 3 -->
     <Button
         android:id="@+id/invDown"
         android:layout_width="45dp"
         android:layout_height="35dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
+        android:onClick="bajarPrincipalHandler"
         android:text="@string/baja"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/cantP"
         app:layout_constraintTop_toBottomOf="@+id/invundp" />
-
+    <!-- index 4 -->
     <Button
         android:id="@+id/invUP"
         android:layout_width="45dp"
         android:layout_height="35dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
+        android:onClick="SubirPrincipalHandler"
         android:text="@string/subir"
         app:layout_constraintStart_toEndOf="@+id/invDown"
         app:layout_constraintTop_toBottomOf="@+id/invundp" />
-
+    <!-- index 5 -->
     <TextView
         android:id="@+id/invundp"
         android:layout_width="wrap_content"
@@ -90,7 +78,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/invName"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!-- index 6 -->
     <TextView
         android:id="@+id/invunds"
         android:layout_width="wrap_content"
@@ -102,7 +90,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/invUP"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!-- index 7 -->
     <EditText
         android:id="@+id/canS"
         android:layout_width="50dp"
@@ -111,12 +99,12 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="0"
-        android:inputType="numberSigned"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/invUP"
         app:layout_constraintTop_toBottomOf="@+id/invunds" />
-
+    <!-- index 8 -->
     <Button
         android:id="@+id/invDNSec"
         android:layout_width="45dp"
@@ -125,8 +113,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/baja"
         app:layout_constraintStart_toEndOf="@+id/canS"
+        android:onClick="BajarSecundario"
         app:layout_constraintTop_toBottomOf="@+id/invunds" />
-
+    <!-- index 9 -->
     <Button
         android:id="@+id/invUPSec"
         android:layout_width="45dp"
@@ -135,6 +124,17 @@
         android:layout_marginTop="8dp"
         android:text="@string/subir"
         app:layout_constraintStart_toEndOf="@+id/invDNSec"
+        android:onClick="SubirSecundario"
         app:layout_constraintTop_toBottomOf="@+id/invunds" />
+    <!-- index 10 -->
+    <TextView
+        android:id="@+id/idObjeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/invName"
+        tools:layout_editor_absoluteX="8dp"
+        tools:visibility="visible" />
 
 </android.support.constraint.ConstraintLayout>

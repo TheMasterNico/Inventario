@@ -15,6 +15,7 @@ public class SelectOptionActivity extends AppCompatActivity {
 
 
     public String Nombre;
+    public int user_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class SelectOptionActivity extends AppCompatActivity {
 
         Intent get = getIntent();
         Nombre = get.getStringExtra("userName");
+        user_id = get.getIntExtra("userID", 1000);
 
         TextView name = findViewById(R.id.welcome_name);
         name.setText(Nombre);
@@ -48,6 +50,14 @@ public class SelectOptionActivity extends AppCompatActivity {
     public void StartInventario(View view) {
         Intent CambioInventario = new Intent(this, Inventariando.class);
         CambioInventario.putExtra("userName", Nombre);
+        CambioInventario.putExtra("userID", user_id);
+        startActivityForResult(CambioInventario, 0);
+    }
+    
+    public void activity_informe(View view) {
+        Intent CambioInventario = new Intent(this, Informes.class);
+        CambioInventario.putExtra("userName", Nombre);
+        CambioInventario.putExtra("userID", user_id);
         startActivityForResult(CambioInventario, 0);
     }
 }

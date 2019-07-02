@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent CambioaSelect = new Intent(this, SelectOptionActivity.class);
                 CambioaSelect.putExtra("userName", user);
+                CambioaSelect.putExtra("userID", Integer.decode(CC));
                 startActivityForResult(CambioaSelect, 0);
 
             }
